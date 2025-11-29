@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niveles – RedShape Fitness</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid red;
+    }
+
+    header h1 {
+      color: red;
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    nav .active {
+      color: red;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 2px solid red;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card h2 {
+      color: red;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>RedShape Fitness</h1>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="planes.html">Planes</a>
+      <a href="niveles.html" class="active">Niveles</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="dieta.html">Dieta</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+
+      <div class="card">
+        <h2>Peso Bajo</h2>
+        <p>Indica que la persona está por debajo del peso recomendado.</p>
+      </div>
+
+      <div class="card">
+        <h2>Peso Estándar</h2>
+        <p>Peso saludable dentro del rango adecuado.</p>
+      </div>
+
+      <div class="card">
+        <h2>Peso Alto</h2>
+        <p>Peso ligeramente por encima del recomendado.</p>
+      </div>
+
+      <div class="card">
+        <h2>Sobrepeso</h2>
+        <p>Nivel que requiere atención y control.</p>
+      </div>
+
+      <div class="card">
+        <h2>Obesidad</h2>
+        <p>Requiere intervención gradual y seguimiento.</p>
+      </div>
+
+      <div class="card">
+        <h2>Obesidad Severa</h2>
+        <p>Requiere un enfoque especializado y progresivo.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
