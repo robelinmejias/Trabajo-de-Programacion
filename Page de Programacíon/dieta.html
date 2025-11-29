@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dieta – RedShape Fitness</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    /* HEADER */
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid red;
+    }
+
+    header h1 {
+      color: red;
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: red;
+    }
+
+    /* CONTENEDOR */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    /* TARJETAS DE DIETAS */
+    .diet-card {
+      background: #151515;
+      border: 2px solid red;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .diet-card h2 {
+      color: red;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .diet-card h3 {
+      color: #ff4d4d;
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+
+    .diet-card ul {
+      margin: 10px 0 0 20px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      nav a { margin: 0 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>RedShape Fitness</h1>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="planes.html">Planes</a>
+      <a href="niveles.html">Niveles</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="dieta.html" class="active">Dieta</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <div class="container">
+
+    <!-- PESO BAJO -->
+    <div class="diet-card">
+      <h2>Peso Bajo – Dieta Recomendada</h2>
+
+      <h3>Desayuno:</h3>
+      <ul>
+        <li>Avena con leche + banana</li>
+        <li>2 huevos hervidos</li>
+        <li>Pan integral con mantequilla de maní</li>
+      </ul>
+
+      <h3>Almuerzo:</h3>
+      <ul>
+        <li>Arroz blanco</li>
+        <li>Pechuga o carne molida</li>
+        <li>Aguacate + ensalada</li>
+      </ul>
+
+      <h3>Cena:</h3>
+      <ul>
+        <li>Pasta o puré de papas</li>
+        <li>Pollo o pescado</li>
+        <li>Batido de frutas con leche</li>
+      </ul>
+    </div>
+
+    <!-- PESO ESTÁNDAR -->
+    <div class="diet-card">
+      <h2>Peso Estándar – Dieta Equilibrada</h2>
+
+      <h3>Desayuno:</h3>
+      <ul>
+        <li>Huevos revueltos + pan integral</li>
+        <li>Fruta fresca (manzana o piña)</li>
+      </ul>
+
+      <h3>Almuerzo:</h3>
+      <ul>
+        <li>Arroz o papas</li>
+        <li>Pechuga de pollo / carne / pescado</li>
+        <li>Vegetales mixtos</li>
+      </ul>
+
+      <h3>Cena:</h3>
+      <ul>
+        <li>Wrap integral con pollo</li>
+        <li>Jugo natural o agua</li>
+      </ul>
+    </div>
+
+    <!-- PESO ALTO -->
+    <div class="diet-card">
+      <h2>Peso Alto – Control Moderado</h2>
+
+      <h3>Desayuno:</h3>
+      <ul>
+        <li>Batido verde (piña + pepino + espinaca)</li>
+        <li>Tostada integral</li>
+      </ul>
+
+      <h3>Almuerzo:</h3>
+      <ul>
+        <li>Arroz integral</li>
+        <li>Pollo a la plancha</li>
+        <li>Vegetales hervidos</li>
+      </ul>
+
+      <h3>Cena:</h3>
+      <ul>
+        <li>Ensalada con proteína</li>
+        <li>Té verde</li>
+      </ul>
+    </div>
+
+    <!-- SOBREPESO -->
+    <div class="diet-card">
+      <h2>Sobrepeso – Reducción Progresiva</h2>
+
+      <h3>Desayuno:</h3>
+      <ul>
+        <li>2 huevos hervidos</li>
+        <li>½ taza de avena con agua</li>
+      </ul>
+
+      <h3>Almuerzo:</h3>
+      <ul>
+        <li>Pollo a la plancha o atún</li>
+        <li>Ensalada vegetal</li>
+      </ul>
+
+      <h3>Cena:</h3>
+      <ul>
+        <li>Sopa ligera o ensalada</li>
+        <li>Fruta pequeña</li>
+      </ul>
+    </div>
+
+    <!-- OBESIDAD -->
+    <div class="diet-card">
+      <h2>Obesidad – Control Estricto</h2>
+
+      <h3>Desayuno:</h3>
+      <ul>
+        <li>Avena con agua</li>
+        <li>1 huevo</li>
+      </ul>
+
+      <h3>Almuerzo:</h3>
+      <ul>
+        <li>Pollo o pavo al vapor</li>
+        <li>Ensalada grande sin aderezos pesados</li>
+      </ul>
+
+      <h3>Cena:</h3>
+      <ul>
+        <li>Vegetales salteados</li>
+        <li>Agua o té sin azúcar</li>
+      </ul>
+    </div>
+
+    <!-- OBESIDAD SEVERA -->
+    <div class="diet-card">
+      <h2>Obesidad Severa – Dieta Especializada</h2>
+
+      <h3>Desayuno:</h3>
+      <ul>
+        <li>Batido verde</li>
+        <li>½ taza de avena</li>
+      </ul>
+
+      <h3>Almuerzo:</h3>
+      <ul>
+        <li>Pescado al vapor</li>
+        <li>Verduras hervidas</li>
+      </ul>
+
+      <h3>Cena:</h3>
+      <ul>
+        <li>Sopa ligera</li>
+        <li>Fruta pequeña</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

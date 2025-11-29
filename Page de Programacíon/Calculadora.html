@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora | RedShape Fitness</title>
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0a0a0a;
+        color: #fff;
+    }
+
+    header {
+        background: #111;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #e60000;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #e60000;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #e60000;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #e60000;
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+    input {
+        width: 90%;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border: 1px solid #e60000;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        background: #e60000;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff1a1a;
+    }
+
+    .resultado {
+        margin-top: 30px;
+        background: #111;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #e60000;
+        display: none;
+        text-align: left;
+    }
+
+    .resultado h3 {
+        color: #e60000;
+    }
+
+    ul li {
+        margin-bottom: 6px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>RedShape Fitness</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="planes.html">Planes</a>
+        <a href="niveles.html">Niveles</a>
+        <a href="calculadora.html" style="color:#e60000;">Calculadora</a>
+        <a href="dieta.html">Dieta</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Calculadora de Entrenamiento + Dieta</h2>
+    <p>Ingresa tu peso en <b>libras (lbs)</b> para obtener tu plan de entrenamiento y dieta.</p>
+
+    <input type="number" id="peso" placeholder="Ejemplo: 165">
+    <br>
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+<script>
+function calcular() {
+    const peso = parseFloat(document.getElementById("peso").value);
+    const res = document.getElementById("resultado");
+
+    if (isNaN(peso) || peso <= 0) {
+        res.style.display = "block";
+        res.innerHTML = "<h3>Error</h3><p>Por favor, ingresa un peso válido en libras.</p>";
+        return;
+    }
+
+    let entrenamiento = "";
+    let dieta = "";
+
+    // --------------------------
+    // PLAN PARA PESO BAJO (-120 lbs)
+    // --------------------------
+    if (peso < 120) {
+
+        entrenamiento = `
+            <h3>ENTRENAMIENTO PARA PESO BAJO</h3>
+            <p>🔥 Objetivo: ganar fuerza y masa muscular.</p>
+            <ul>
+                <li>Sentadillas — 4x12</li>
+                <li>Flexiones asistidas — 3x10</li>
+                <li>Puente de glúteo — 4x15</li>
+                <li>Plancha — 3x30s</li>
+                <li>Saltar cuerda — 3x20s</li>
+            </ul>
+        `;
+
+        dieta = `
+            <h3>PLAN DE DIETA PARA PESO BAJO</h3>
+            <p>🔥 Objetivo: aumentar masa muscular de forma saludable.</p>
+            <ul>
+                <li>Desayuno: avena + mantequilla de maní + frutas</li>
+                <li>Media mañana: yogurt + granola</li>
+                <li>Almuerzo: pollo o res + arroz + vegetales</li>
+                <li>Merienda: batido de proteína o peanut butter</li>
+                <li>Cena: pasta o arroz + atún o huevos</li>
+                <li>Extra: 1–2 snacks altos en calorías buenas</li>
+            </ul>
+        `;
+
+    }
+
+    // --------------------------
+    // PLAN PARA PESO MEDIO (120–175 lbs)
+    // --------------------------
+    else if (peso >= 120 && peso < 175) {
+
+        entrenamiento = `
+            <h3>ENTRENAMIENTO PARA PESO MEDIO</h3>
+            <p>🔥 Objetivo: tonificar, ganar fuerza y mejorar resistencia.</p>
+            <ul>
+                <li>Flexiones — 4x12</li>
+                <li>Sentadillas — 4x15</li>
+                <li>Burpees — 3x10</li>
+                <li>Plancha lateral — 3x30s</li>
+                <li>Mountain climbers — 3x20</li>
+            </ul>
+        `;
+
+        dieta = `
+            <h3>PLAN DE DIETA PARA PESO MEDIO</h3>
+            <p>🔥 Objetivo: mantener peso saludable y definir.</p>
+            <ul>
+                <li>Desayuno: huevos + pan integral + fruta</li>
+                <li>Media mañana: manzana o frutos secos</li>
+                <li>Almuerzo: pollo o pavo + arroz o batata + ensalada</li>
+                <li>Merienda: batido natural o yogurt</li>
+                <li>Cena: pescado o pollo + vegetales</li>
+                <li>Extra: 2–3 litros de agua al día</li>
+            </ul>
+        `;
+    }
+
+    // --------------------------
+    // PLAN PARA PESO ALTO (+175 lbs)
+    // --------------------------
+    else {
+
+        entrenamiento = `
+            <h3>ENTRENAMIENTO PARA PESO ALTO</h3>
+            <p>🔥 Objetivo: quemar grasa, mejorar movilidad y fortalecer articulaciones.</p>
+            <ul>
+                <li>Sentadilla en pared — 3x30s</li>
+                <li>Marcha en el sitio — 4x40s</li>
+                <li>Bird-dog — 4x12</li>
+                <li>Elevaciones de piernas — 3x10</li>
+                <li>Caminata rápida — 15 a 25 minutos</li>
+            </ul>
+        `;
+
+        dieta = `
+            <h3>PLAN DE DIETA PARA PESO ALTO</h3>
+            <p>🔥 Objetivo: quemar grasa sin perder energía.</p>
+            <ul>
+                <li>Desayuno: huevos + avena + fruta</li>
+                <li>Media mañana: frutos secos o yogurt</li>
+                <li>Almuerzo: pollo o pescado + ensalada + batata</li>
+                <li>Merienda: batido verde o tuna con galletas integrales</li>
+                <li>Cena: vegetales + proteína (pollo, pescado o tofu)</li>
+                <li>Evitar: frituras, refrescos, pan blanco y azúcar</li>
+            </ul>
+        `;
+    }
+
+    res.style.display = "block";
+    res.innerHTML = entrenamiento + "<br>" + dieta;
+}
+</script>
+
+</body>
+</html>

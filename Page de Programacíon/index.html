@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Inicio | RedShape Fitness</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0a0a0a;
+        color: #fff;
+    }
+
+    header {
+        background: #111;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #e60000;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #e60000;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #e60000;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(to bottom, #0a0a0a, #111);
+    }
+
+    .hero h2 {
+        font-size: 2.8rem;
+        color: #e60000;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        color: #ccc;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .btn-main {
+        margin-top: 25px;
+        padding: 15px 35px;
+        background: #e60000;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-main:hover {
+        background: #ff1a1a;
+    }
+
+    .features {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .features h3 {
+        font-size: 2rem;
+        color: #e60000;
+        margin-bottom: 20px;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .feature-card {
+        background: #111;
+        padding: 25px;
+        border-radius: 12px;
+        border-left: 3px solid #e60000;
+        transition: 0.3s;
+    }
+
+    .feature-card:hover {
+        background: #1a1a1a;
+        transform: translateY(-5px);
+    }
+
+    .feature-card h4 {
+        color: #e60000;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 25px;
+        text-align: center;
+        background: #111;
+        border-top: 2px solid #e60000;
+        color: #ccc;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>RedShape Fitness</h1>
+    <nav>
+        <a href="index.html" style="color:#e60000;">Inicio</a>
+        <a href="planes.html">Planes</a>
+        <a href="niveles.html">Niveles</a>
+        <a href="calculadora.html">Calculadora</a>
+        <a href="dieta.html">Dieta</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Transforma tu cuerpo. Transforma tu vida.</h2>
+    <p>
+        Bienvenido a <b>RedShape Fitness</b>, tu plataforma gratuita de entrenamiento funcional, 
+        planes personalizados, dietas inteligentes y herramientas para mejorar tu salud.
+    </p>
+
+    <a href="calculadora.html" class="btn-main">Comenzar</a>
+</section>
+
+<section class="features">
+    <h3>¿Qué ofrecemos?</h3>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h4>Entrenamientos Personalizados</h4>
+            <p>
+                Recibe rutinas funcionales basadas en tu peso, nivel y objetivo.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h4>Planes por Nivel</h4>
+            <p>
+                Desde principiante hasta avanzado, según tu resistencia y habilidad.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h4>Calculadora Inteligente</h4>
+            <p>
+                Ingresa tu peso en libras y obtén un plan de entrenamiento y dieta.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h4>Dietas Balanceadas</h4>
+            <p>
+                Recibe recomendaciones alimenticias diseñadas para tu categoría de peso.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h4>Contenido 100% Gratis</h4>
+            <p>
+                Todos los entrenamientos y dietas son completamente gratis.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 RedShape Fitness — Todos los derechos reservados.
+</footer>
+
+</body>
+</html>

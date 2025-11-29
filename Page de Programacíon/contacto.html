@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto – RedShape Fitness</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    /* HEADER */
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid red;
+    }
+
+    header h1 {
+      color: red;
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: red;
+    }
+
+    /* CONTENEDOR */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .contact-card {
+      background: #151515;
+      border: 2px solid red;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .contact-card h2 {
+      text-align: center;
+      color: red;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    /* FORMULARIO */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      background: #0e0e0e;
+      border: 2px solid red;
+      padding: 12px;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
+    button {
+      background: red;
+      color: white;
+      padding: 15px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #b30000;
+    }
+
+    /* INFO */
+    .info {
+      margin-top: 30px;
+      padding: 20px;
+      background: #111;
+      border-left: 4px solid red;
+      border-radius: 8px;
+    }
+
+    .info p {
+      margin: 8px 0;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      nav a { margin: 0 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>RedShape Fitness</h1>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="planes.html">Planes</a>
+      <a href="niveles.html">Niveles</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="dieta.html">Dieta</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <div class="container">
+
+    <div class="contact-card">
+      <h2>Contáctanos</h2>
+
+      <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <input type="text" placeholder="Asunto" required>
+        <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+
+    <div class="info">
+      <p><strong>Email:</strong> soporte@redshape.com</p>
+      <p><strong>Instagram:</strong> @RedShapeFitness</p>
+      <p><strong>Horario:</strong> Lunes a Viernes — 8:00 AM a 6:00 PM</p>
+      <p><strong>Respuesta:</strong> dentro de 24 horas</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
